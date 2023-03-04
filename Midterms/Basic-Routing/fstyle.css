@@ -1,0 +1,42 @@
+body {
+  background-color: #e3dffd;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  background-color: #393053;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.nav a {
+  float: right;
+  background-color: #635985;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: #7db9b6;
+  color: black;
+}
+
+.nav a.active {
+  background-color: #e5d1fa;
+  color: black;
+}
+
+h3 {
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+  color: black;
+}
