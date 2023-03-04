@@ -31,7 +31,7 @@ app.get('/file-upload', (req, res) => {
   res.sendFile(__dirname + '/' + 'file-upload.html');
 });
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//to get "/""
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/' + 'index.html');
 });
