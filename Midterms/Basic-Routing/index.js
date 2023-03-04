@@ -31,28 +31,28 @@ app.get('/file-upload', (req, res) => {
   res.sendFile(__dirname + '/' + 'file-upload.html');
 });
 
-//to get "/""
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/' + 'index.html');
 });
 
 //get form
-var bodyParser = require('body-parser');
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(express.urlencoded());
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/' + 'index.html');
+app.get('/', (req, res, next) => {
+  res.send(`<form method="POST" action="/">
+  <input type="text" name="name" placeholder="name">
+  <input type="text" name="subject" placeholder="subject">
+  <input type="text" name="email" placeholder="email" >
+  <input type="text" name="message" placeholder="message" >
+
+  <input type="submit">
+</form>`);
 });
 
-app.post('/process_post', urlencodedParser, function (req, res) {
-  response = {
-    first_name: req.body.first_name,
-    last_name: req.body.last_name,
-  };
-
-  console.log(response);
-  res.end(JSON.stringify(response));
+app.post('/', function (req, res, next) {
+  res.send(JSON.stringify(req.body));
 });
 
 //app listen server
