@@ -11,11 +11,13 @@
       <a href="about.html">About</a>
       <a href="upload.html">Upload</a>
     </div>
-    <form action="http://localhost:3000/process_post" method="post">
-      First Name: <input type="text" name="first_name" /> <br />
-      Last Name: <input type="text" name="last_name" />
-      Subject: Message: Email:
-      <input type="submit" value="Submit" />
+    <form method="POST" action="/">
+      <input type="text" name="name" placeholder="name" /> <br />
+      <input type="text" name="subject" placeholder="subject" /><br />
+      <input type="text" name="email" placeholder="email" /><br />
+      <input type="text" name="message" placeholder="message" /><br />
+
+      <input type="submit" />
     </form>
   </body>
 </html>
